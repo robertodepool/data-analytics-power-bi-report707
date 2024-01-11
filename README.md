@@ -126,5 +126,48 @@ sums the result for all rows
 
 ## Milestone 4
 
+### Task 1 - Report pages
+Report pages where added, in Model view by pressing the plus button. The pages added:
+- Executive Summary
+- Customer Detail
+- Product Detail
+- Stores Map
+Also a theme was chosen in the View tab. The team chosen was the Colorblind safe one, in case any viewer of these is colourblind. 
+
+### Task 2 - Adding Navigation Sidebar
+- Rectangle shape added in all pages. Insert > Shapes > Choose rectangle > In properties select desired colour. 
+
+## Milestone 5
+
+### Task 1 - Creating Headline Card Visuals
+1.  Two rectangles in top left corner of the page were created (similar process as Adding navigation bar)
+2. Two card visuals to go on over these rectangles were added one for Total customers and one for the Revenue per Customer measure (this measure was created by dividing the Total Customers / Total Revenue). 
+3. The Total Customers field was renamed to Unique Customers.
+
+### Task 2 - Adding Summary Charts
+1. Donut chart visual was added using the Users[Country] column to filter the [Total Customers] measure
+2. Column chart visual was created using the Products[Category] column to filter the [Total Customers] measure
+
+### Task 3 - Creating  Line Chart 
+1. Line chart visual was created where 
+    - X axis: Date Hierarchy
+    - Y axis: Total Customers measures
+    Where it was selected that the user could only drill down up to Start of Month, hence deselecting Date and Start of Week on the Data pane
+2. A trend line, and a forecast for the next 10 periods with a 95% confidence interval were added. This can be selected to be turned on, on the Format pane. 
+
+### Task 4 - Creating a Top 20 Customer table 
+1. A visuals table was created with the followiung columns:
+    - Customers[Full Name]
+    - Total Orders measure
+    - Total Revenue measure
+2. A TopN Filter was applied to get the Top 20 Customers based on the Total Revenue 
+
+### Task 5 - Creating Top Customer Cards
+1. A card (new) visual was added. This was done by using a Q&A card to get the Top customer by Top Revenue (this is the prompt).
+2. Then the card visual icon is pressed and Full Name, Total Quantity and Total Revenue are selected.
+
+### Task 6 - Adding a Data Slicer
+1. A data slicer was added. By pressing on the visual followed by selecting Year which is what we want the data to be sliced on. 
+
 
 
