@@ -169,5 +169,44 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
 ### Task 6 - Adding a Data Slicer
 1. A data slicer was added. By pressing on the visual followed by selecting Year which is what we want the data to be sliced on. 
 
+## Milestone 6 - Customer Detail Page
+### Task 1 - Creating task visuals
+1. Adding card visuals using the card (new)
+2. Total Revenue, Total Orders and Total Profit are the measures selected
+3. On  Format > Callout Values we select 2 decimal points for Total Profit and Total Revenue, 1 decimal point for Total Orders
+4. The formatting of the card visuals to kept the same as in the Customer Detail page
 
+### Task 2 - Adding a Revenue Trending Line Chart 
+1. Copying the Customer Details line graph.
+2. The Y axis is changed to Total Revenue, The X axis is kept the same.
 
+### Task 3 - Adding Donut charts for Total Revenue by Country and Total Revenue by Store Type
+1. Revenue by Country donut chart:
+    - Copy donut chart from Customer detail page
+    - Change Total Customers to Total Revenue 
+2. Revenue by Store Type donut chart
+    - Copy donut chart made on Step 1
+    - Change Stores[Country] to Stores[Store Type]
+
+### Task 4 - Adding a Bar Chart of Orders by Product categories
+1. Clustered bar chart visual was created
+    - Y axis: Products[Category]
+    - X axis: Total Orders measure
+
+### Task 5 - Adding KPI Visuals
+1. New measures to be created in the Measures tables using DAX formulas, formulas available in the .pbix file. 
+    - Previous Quarter Profit
+    - Previous Quarter Revenue
+    - Previous Quarter Orders
+    - Target Profit - which is 5%, this is achieved by multiplying the Previous Quarter Profit measure by 1.05. This is done respectively to both measures below. 
+    - Target Revenue 
+    - Target Orders
+2. KPI visual is created where:
+    - Value: Total Profit
+    - Trend axis: Start of Quarter
+    - Target: Target Profit
+3. In the Format pane the Trend axis is turned on, the direction: high is good, the bad colour is set to red and the Transparency is set to 15%
+4. Step 2 and 3 are repetead for revenue and orders. 
+
+## Milestone 7 - Create a Product Detail Page
+### Task 1 - 
