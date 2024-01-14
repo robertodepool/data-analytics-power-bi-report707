@@ -209,4 +209,118 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
 4. Step 2 and 3 are repetead for revenue and orders. 
 
 ## Milestone 7 - Create a Product Detail Page
-### Task 1 - 
+### Task 1 - Add Gauge Visuals
+1. In the Measures Table the following measures were created:
+    - Current Quarter Profit
+    - Current Quarter Revenue 
+    - Current Quarter Orders
+    - Quarterly Target Profit - which is 10%, measure achieved by multiplying Current Quarter Profit by 1.1. This is done respectively to both measures below
+    - Quarterly Target Revenue
+    - Quarterly Target Orders
+2. Three gauge visuals were inserted where respectively:
+    - Values:
+        - Current Quarter Profit
+        - Current Quarter Revenue 
+        - Current Quarter Orders
+    - Maximum Value
+        - Quarterly Target Profit
+        - Quarterly Target Revenue
+        - Quarterly Target Orders
+3. Conditional formatting was done to the callout value of each Gauge. This is done by going to Callout Value in the Format pane and pressing the fx button the choosing Rules and the rules applied were
+    - What field should we base this on? Current Quarter Orders
+    - If value >= 3299.6 (this is the Quarterly Target Orders value) and < 999999999 (largest number possible) then the colour red
+    - If value >= 0 and < 3299.6 then black
+    - This is done respectively to each Gauge
+
+### Task 2 - Plan out the Filter State Cards
+
+
+### Task 3 - Adding an Area Chart of Revenue by Product Category
+1. Area Chart was inserted with the following fields:
+    - X axis Dates[Start of Quarter]
+    - Y axis Total Revenue measure
+    - Legend Products[Category]
+
+### Task 4 - Adding a Top Product tables 
+1. A table visual is added witht he following columns selected:
+    - Product Description
+    - Total Revenue
+    - Total Customers
+    - Total Orders
+    - Profit per Order
+2. On the filters pane on Description the Filter Type is put to Top N, in Show Items, select Top and put the number 10, in By Value Total Revenue is chosen. 
+
+### Task 5 - Adding a scatter graph of Quantity Sold vs Profit per Item 
+1. The Profit per Item column was created in the Products table by subtracting the Sale Price by the Cost Price. The DAX formula is available in the .pbix file 
+2. A Scatter chart visual is added with the following specifications:
+    - Values: Products[Description]
+    - X-Axis: Products[Profit per Item]
+    - Y-Axis: Products[Total Quantity]
+    - Legend: Products[Category]
+
+### Task 6 - Creating a Slicer Tool Bar
+1. A custom button is added to the Navigation bar. The custom icon is a Filter icon. The tooltip text is changed to Open Slicer Panel. 
+2. A rectangle shape is added (what is going to be the slicer bar). Where the shape is the height of the page and 3 times the width of the navigation bar. The shape is brought to the top of the stacking order. 
+3. Two new Slicers added
+- Products[Category] - renamed: Product Category
+    - Slicer set to vertical list
+    - Multi-select
+- Stores[Country] - renamed Country 
+    - Slicer set to vertical list
+    - Select All option
+    - Single select
+4. A back button is added to the right top corner of the slicer bar. 
+5. The Slicer bar, the back button and both slicers are grouped. By selecting them all and grouping them in the selection pane. Rename Slicer Bar Group
+6. Bookmark pane opened in View tab. Two bookmarks were added 
+    - Slicer Bar Closed 
+        - Hide Slicer Bar Group in Selection pane by clicking the eye
+        - Right click and tick off Data
+    - Slicer Bar Open
+        - Make sure Slicer Bar Group visible
+        - Right click and tick off Data
+7. Actions for the buttons were assigned where:
+    - Back button: 
+    - Filter button:
+
+
+## Milestone 8 - Creating a Store Map page
+### Task 1 - Adding a Map visual 
+1. A Map visual is added where:
+    - Location: Geography Hierarchy 
+    - Bubble Size: Profit YTD
+    - In Format pane:
+        - Show Labels: On
+        - Auto Zoom: On
+        - Zoom buttons: Off
+        - Lasso button: Off
+
+### Task 2 - Adding a Country Slicer
+1. Above the Map visual a slicer visual is added where the slicer field is Stores[Country] and the slicer style is Tile. Also, the Selection settings are Multi-select with Ctrl and Show "Select All" as an option in the slicer.
+
+### Task 3 - Creating a Store Drillthrough page 
+1. A new page called Store Drillthrough is created. In the Format pane the page type is set to drillthrough, drillthrough from: Country Region and Drillthrough when: Used as Category.
+2. Two new measures are created:
+- Profit Goal (20%) where the Profit YTD is multiplied by 1.2 to obtain this. DAX formula available in file. 
+- Profit Revenue, same procedure as above. 
+3. A table visual with the Top 5 products, the Top N filter is used top obtain the top 5 on the Total Revenue measure. The table columns are:
+    - Description 
+    - Profit YTD
+    - Total Orders
+    - Total Revenue
+4. A column chart was added where: 
+    - X axis: Products[Category]
+    - Y axis: Total Orders measure
+5. Two Guage visuals were added where:
+    - Value: Profit YTD Target: Profit Goal
+    - Value: Revenue YTD Target: Revenue Goal
+6. A Card visual was added selecting Stores[Geography]. But, Geography is renamed to Stored Location so when selecting any item from the table visual the card shows the store Location. 
+
+### Task 4 - Creating a Tooltip page
+1. A new page called Tooltip page is created. The page type is set to Tooltip.
+2. The Profit Gauge is copied and pasted from the Drillthrough page to the Tooltip page
+3. In Stores Map page, on the Map visuals, Tooltips in the format page is set to On. Options:
+- Type: Report Page
+- Page: Tooltip Page
+
+
+
