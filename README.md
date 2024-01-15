@@ -233,7 +233,7 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
     - This is done respectively to each Gauge
 
 ### Task 2 - Plan out the Filter State Cards
-
+1. Add a Filter Card (new) selecting Products[Category] and Stores[Country]
 
 ### Task 3 - Adding an Area Chart of Revenue by Product Category
 1. Area Chart was inserted with the following fields:
@@ -247,7 +247,7 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
     - Total Revenue
     - Total Customers
     - Total Orders
-    - Profit per Order
+    - Profit per Order (a new measure obtained by dividing Total Profit by Total Orders)
 2. On the filters pane on Description the Filter Type is put to Top N, in Show Items, select Top and put the number 10, in By Value Total Revenue is chosen. 
 
 ### Task 5 - Adding a scatter graph of Quantity Sold vs Profit per Item 
@@ -267,7 +267,6 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
     - Multi-select
 - Stores[Country] - renamed Country 
     - Slicer set to vertical list
-    - Select All option
     - Single select
 4. A back button is added to the right top corner of the slicer bar. 
 5. The Slicer bar, the back button and both slicers are grouped. By selecting them all and grouping them in the selection pane. Rename Slicer Bar Group
@@ -322,5 +321,25 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
 - Type: Report Page
 - Page: Tooltip Page
 
+## Milestone 5 - Cross Filtering and Navigation
+### Task 1 - Fixing the Cross Filtering
+- Using the Edit Interaction option in the Format tab (ribbon) for the pages below. Pressing the X button when the interaction is not needed. 
+1. Executive Summary page
+    - Product Category bar chart to not filter card visuals or KPI visuals. 
+2. Customer Detail page
+    - Table visual to not interact with any other visual
+    - Total Customer by Product donut chart visual to not interact with Line chart
+    - Total Customers by Country donut chart to cross filter the Total Customer by Product donut chart
+3. Product Detail page
+    - Scatter graph to not affect any visual 
+    - Table visual to not affect any visual
+
+### Task 2 - Adding Navigation buttons
+1. Four blank buttons were added to the navigation bar on the Executive Summary page
+2. On Format pane > Button Style > Apply settings: Default. Then on Icon > Icon Type > Custom, select the button corresponding button in white (the blue option is for the hover option). Repeat this with every button. 
+3. Changing the Apply settings to: On Hover and select the blue image for each button. 
+4. For each button the go to Action on the Format pane, turn it on. Select the type to Page Navigation and select the appropriate page for each button.
+5. Group the buttons, and copy and paste to each page. 
+6. Make sure you change the Executive Summary button in the subsequent page as you can not select the same page the button is on initially. 
 
 
