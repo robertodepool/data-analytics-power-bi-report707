@@ -1,73 +1,159 @@
-# Project Title
-blablabla
+# Data Analytics Power BI Report
 
-## Project Preparation
-As I am using a Mac OS, project preparation involves creating a Windows Azure Virtual Machine to download Power BI Desktop.
+#### Project prompt
+You have recently been approached by a medium-sized international retailer who is keen on elevating their business intelligence practices. With operations spanning across different regions, they've accumulated large amounts of sales from disparate sources over the years.
 
-## Milestone 1
+#### Project Aim
+To use Power BI to:
+- Import the data from various sources
+- Clean the data
+- Transform the data
+- Create relationships between tables
+- Create useful measures 
+- Build a multi-page report with visuals to showcase the data in an appealing manner for different teams within the company. 
 
-## Milestone 2
-This milestone comprises four tables with a focus on learning how to load and prepare data in Power BI.
-### Table 1 - Orders
-- The Orders table is the primary fact table, providing information on each order. It includes details such as order and shipping dates, customer information, store and product IDs for association with dimension tables, and the quantity of each ordered product. Each order in this table corresponds to a single product type, resulting in only one product code per order.
+## Table of Contents 
+- [File Structure](#file-structure)
+- [Milestone 1 - Creating a Github environment for the project](#milestone-1---creating-a-github-environment-for-the-project)
+- [Milestone 2 - Creating a Virtual Machine, Importing and Transforming the data](#milestone-2---creating-a-virtual-machine-importing-and-transforming-the-data)
+  - [Task 1 - Creating a Virtual Machine and Downloading Power BI](#task-1---creating-a-virtual-machine-and-downloading-power-bi)
+  - [Task 2 - Loading and Transforming the Orders table](#task-2---loading-and-transforming-the-orders-table)
+  - [Task 3 - Loading and Transforming the Products table](#task-3---loading-and-transforming-the-products-table)
+  - [Task 4 - Loading and Transforming the Stores table](#task-4---loading-and-transforming-the-stores-table)
+  - [Task 5 - Customers](#task-5---loading-and-transforming-the-customers-table)
 
-  1. I connect to the Azure SQL Database using Get Data > More... > Azure > Azure SQL Database. Using credentials provided. 
+- [Milestone 3 - Creating the Data Model](#milestone-3---creating-the-data-model)
+  - [Task 1 - Creating a Date Table](#task-1---creating-a-date-table)
+  - [Task 2 - Building the Star Schema Data Model](#task-2---building-the-star-schema-data-model)
+  - [Task 3 - Creating a measure table](#task-3---creating-a-measure-table)
+  - [Task 4 - Creating Key measures](#task-4---creating-key-measures)
+  - [Task 5 - Creating Date and Geography hierarchies](#task-5---creating-date-and-geography-hierarchies)
 
-  2. Navigate to the Power Query Editor using the Transform Data icon in the ribbon. Then remove the column named [Card Number] to ensure data privacy using the Remove Column option in the ribbon.
-  
-  3. Using Split Column feature to separate the [Order Date] and [Shipping Date] columns into two distinct columns. This is done by Select Column > Split Column in the ribbon > by delimiter > Select the Space option due to the nature of out initial column. 
+- [Milestone 4 - Setting up the Report](#milestone-4---setting-up-the-report)
+  - [Task 1 - Report pages](#task-1---report-pages)
+  - [Task 2 - Adding a Navigation Sidebar](#task-2---adding-a-navigation-sidebar)
 
-  4. Filter out and remove any rows where the [Order Date] column has missing or null. Done by Remove rows in ribbon > Remove Blank rows. 
+- [Milestone 5 - Building a Customer Detail page](#milestone-5---building-a-customer-detail-page)
+  - [Task 1 - Creating Headline Card Visuals](#task-1---creating-headline-card-visuals)
+  - [Task 2 - Adding Summary Charts](#task-2---adding-summary-charts)
+  - [Task 3 - Creating Line Chart](#task-3---creating-line-chart)
+  - [Task 4 - Creating a Top 20 Customer table](#task-4---creating-a-top-20-customer-table)
+  - [Task 5 - Creating Top Customer Cards](#task-5---creating-top-customer-cards)
+  - [Task 6 - Adding a Data Slicer](#task-6---adding-a-data-slicer)
 
-  5. Rename the columns in your dataset to align with Power BI naming conventions, ensuring consistency and clarity in your report. A lot of the column are named using underscores for spaces, amongst other insconsistencies. 
-  ### Table 2 - Products
-  This part focuses on the Products table, which contains details about each product sold by the company. Information includes the product code, name, category, cost price, sale price, and weight.
+- [Milestone 6 - Customer Detail Page](#milestone-6---customer-detail-page)
+  - [Task 1 - Creating task visuals](#task-1---creating-task-visuals)
+  - [Task 2 - Adding a Revenue Trending Line Chart](#task-2---adding-a-revenue-trending-line-chart)
+  - [Task 3 - Adding Donut charts for Total Revenue by Country and Total Revenue by Store Type](#task-3---adding-donut-charts-for-total-revenue-by-country-and-total-revenue-by-store-type)
+  - [Task 4 - Adding a Bar Chart of Orders by Product categories](#task-4---adding-a-bar-chart-of-orders-by-product-categories)
+  - [Task 5 - Adding KPI Visuals](#task-5---adding-kpi-visuals)
 
-    1. Download the Products.csv file and use Power BI's Get Data > More > Text/csv file. 
+- [Milestone 7 - Create a Product Detail Page](#milestone-7---create-a-product-detail-page)
+  - [Task 1 - Add Gauge Visuals](#task-1---add-gauge-visuals)
+  - [Task 2 - Plan out the Filter State Cards](#task-2---plan-out-the-filter-state-cards)
+  - [Task 3 - Adding an Area Chart of Revenue by Product Category](#task-3---adding-an-area-chart-of-revenue-by-product-category)
+  - [Task 4 - Adding a Top Product tables](#task-4---adding-a-top-product-tables)
+  - [Task 5 - Adding a scatter graph of Quantity Sold vs Profit per Item](#task-5---adding-a-scatter-graph-of-quantity-sold-vs-profit-per-item)
+  - [Task 6 - Creating a Slicer Tool Bar](#task-6---creating-a-slicer-tool-bar)
 
-    2. In the Data view, ensure the uniqueness of each product code by using the Remove Duplicates function on the product_code column.
+- [Milestone 8 - Creating a Store Map page](#milestone-8---creating-a-store-map-page)
+  - [Task 1 - Adding a Map visual](#task-1---adding-a-map-visual)
+  - [Task 2 - Adding a Country Slicer](#task-2---adding-a-country-slicer)
+  - [Task 3 - Creating a Store Drillthrough page](#task-3---creating-a-store-drillthrough-page)
+  - [Task 4 - Creating a Tooltip page](#task-4---creating-a-tooltip-page)
 
-    3. Follow the steps below to clean and transform the data in the weight column:
+- [Milestone 9 - Cross Filtering and Navigation](#milestone-9---cross-filtering-and-navigation)
+  - [Task 1 - Fixing the Cross Filtering](#task-1---fixing-the-cross-filtering)
+  - [Task 2 - Adding Navigation buttons](#task-2---adding-navigation-buttons)
 
-        a. In Power Query Editor, leverage the Column From Examples feature to generate two new columns from the weight column - one for the weight values and another for the units (e.g. kg, g, ml). Sort the weight column by descending to obtain a variety of examples. Add Column in ribbon > Column from Examples > From Selection (having selected Weight column). Then make sure the Units and Value columns that are added have the desired values within the column.
+- [Mileston 10 - Creating Metrics for users outside the company using SQL](#mileston-10---creating-metrics-for-users-outside-the-company-using-sql)
+  - [Task 1 - Connecting to the SQL Server](#task-1---connecting-to-the-sql-server)
+  - [Task 2 - Checking the table and column names](#task-2---checking-the-table-and-column-names)
+  - [Task 3 - Querying the database](#task-3---querying-the-database)
 
-        b. For the newly created Units column, replace any blank entries with kg. Replace values in ribbon > Replace value to find empty (for blank entries) and replace with "kg"
+- [Images of Power BI's Report Pages](#images-of-power-bis-report-pages)
 
-        c. Convert the data type of the Values column to a decimal number. Select Values > Data type: decimal number in ribbon 
+## File Structure
+- Root Directory
 
+    - csv_results
+        - question_1.csv
+        - question_2.csv
+        - question_3.csv
+        - question_4.csv
+        - question_5.csv
+    - README_images
+        - customer_detail.png
+        - executive_summary.png
+        - product_detail.png
+        - star_schema.png
+        - store_drillthrough.png
+        - stores_map.png
+        - tooltip_page.png    
+    - sql_queries
+        - question_1.sql
+        - question_2.sql
+        - question_3.sql
+        - question_4.sql
+        - question_5.sql
+    - table_columns
+        - customer_columns.csv
+        - dates_columns.csv
+        - orders_columns.csv
+        - products_columns.csv
+        - stores_columns
+    - power_bi_project.pbix
+    - README.md
 
-    4. From the Data view, create a new calculated column. If the unit in the units column is not kg, divide the corresponding value in the values column by 1000 to convert it to kilograms. Column tools > New Columns > Use following function: Weight in kg = IF(Products[Units] <> "kg", Products[Values] / 1000, Products[Values]).
-    The IF statement in DAX format explains that if the value in the Units column is not (<>) "kg" then the corresponding value in the Values column is divided by a 1000 otherwise it remains the same.    
+## Milestone 1 - Creating a Github environment for the project 
+1. A Github environment for the project was created and connected to the local machine's VScode. 
 
-    5. Return to the Power Query Editor and delete any columns that are no longer needed.
+## Milestone 2 - Creating a Virtual Machine, Importing and Transforming the data
 
-    6. Rename the columns in your dataset to match Power BI naming conventions, ensuring a consistent and clear presentation in your report. Columns renamed accordingly. 
+### Task 1 - Creating a Virtual Machine and Downloading Power BI
+- A Windows virtual machine was created on Microsoft Azure for the purpose of downloading Power BI
+- A file called power_bi_project.pbix was created
 
-### Table 3 - Stores
-This part focuses on the Stores table, which contains comprehensive information about each store. Details include the store code, store type, country, region, and address.
+### Task 2 - Loading and Transforming the Orders table
+The Orders table is the main fact table. It contains information about each order, including the order and shipping dates, the customer, store and product IDs for associating with dimension tables, and the amount of each product ordered. Each order in this table consists of an order of a single product type, so there is only one product code per order
+1. The Orders table is imported from an Azure SQL Database with the credentials provided
+2. The [Card Number] column is deleted for data privacy
+3. The [Order Date] and [Shipping Date] were split
+4. Missing and null values on [Order Date] column were filtered out and removed
+5. Columns were renamed in accordance to Power BI conventions
 
-1. Utilize Power BI's Get Data option to connect to Azure Blob Storage and import the Stores table into your project. Get Data > More... > Azure Blob Storage > Enter the Blob Storage credentials provided: Account Name, Account Key and Container Name
+### Task 3 - Loading and Transforming the Products table
+The Products table contains information about each product sold by the company, including the product code, name, category, cost price, sale price, and weight.
+1. The Products table was a .csv which was downloaded and imported to Power BI. 
+2. Duplicates on Product Code column were removed
+3. The Weight column was cleaned and transoformed:
+    - A Values and Units (kg, ml, etc) columns were created from the Weight using the Column from Example feature. 
+    - Units column blank entries replaced with kg 
+    - Values column blank/error entries replaced with 1
+    - Values column data type converted to decimal number
+    - New calculated column created  (Weight in kg) where if the Units column is not kg the value in the Values column is divided by 1000. DAX formula:
+    - Weight in kg = IF(Products[Units] <> "kg", Products[Values] / 1000, Products[Values])
+4. Columns that are no longer needed such as the previous weight column were deleted
+5. Columns were renamed in accordance to Power BI conventions
 
-    - Once this is done go to Transform data and double click on Binary on the table so it shows the Stores.csv file.
+### Task 4 - Loading and Transforming the Stores table
+The Stores table contains information about each store, including the store code, store type, country, region, and address.
+1. The Stores table is imported from an Azure Blob storage with the credentials provided
+2. Columns were renamed in accordance to Power BI conventions
 
-2. Rename the columns in your dataset to align with Power BI naming conventions, ensuring clarity and consistency in your report.
+### Task 5 - Loading and Transforming the Customers table 
+The Customers table contains information abot the customer, including address, date of birth, email, telephone, among others. 
+1. The Customer table was downloaded from a .zip file and imported to Power BI. The table was in 3 different parts so they were appended once imported. 
+2. A [Full Name] column was created combining the [First Name] and [Last Name] columns. 
+3. Columns no longer needed were deleted.
+4. Columns were renamed in accordance to Power BI conventions
 
-### Table 4 - Customers 
-This part involves downloading the Customers.zip file from a link and unzipping it on your local machine. Inside the zip file, you'll find a folder containing three CSV files, each with the same column format, representing the regions in which the company operates.
+## Milestone 3 - Creating the Data Model
 
-1. Use the Get Data option in Power BI to import the Customers folder into your project. Utilise the Folder data connector, navigate to your folder, and select Combine and Transform to import the data. Power BI will automatically append the three files into one query. Get Data > More > File > Folder > Select the unzipped Folder.
-
-2. Once the data is loaded into Power BI, create a Full Name column by combining the [First Name] and [Last Name] columns. Column tools > New Column > Use following function: Full Name = Customers[First Name] & " " & Customers[Last Name]
-
-3. Delete any obviously unused columns (e.g., index columns) and rename the remaining columns to align with Power BI naming conventions.
-
-## Milestone 3
-
-### Task 1 - Date table creation
-This part inolves creating a date table using the Power BI's intelligence functions. We will be making a continous date table covering the entire time period of our data. 
-1. To create the table. Report view > Modeling on ribbon > New table > Following formula: Dates = CALENDAR(MIN(Orders[Order Date]), MAX(Orders[Shipping Date]))
-
-2. Creating the following columns by going to New Column. And creating: 
+### Task 1 - Creating a Date Table
+A Continues date table is created covering the entire time period of the data. 
+1. A date table running from the start of the year containing the earliest date in the Orders[Order Date] column to the end of the year containing the latest date in the Orders[Shipping Date] column is created with the following DAX formula Dates = CALENDAR(MIN(Orders[Order Date]), MAX(Orders[Shipping Date]))
+2. The following column were created: 
     - Day of Week
     - Month Number (i.e. Jan = 1, Dec = 12 etc.)
     - Month Name
@@ -77,22 +163,25 @@ This part inolves creating a date table using the Power BI's intelligence functi
     - Start of Quarter
     - Start of Month
     - Start of Week
-The DAX formula to create each of this is in the .pbix file
+- Some examples of the DAX formulas used to create the columns:
+    - Day of Week = WEEKDAY(Dates[Date])
+    - Month Name = FORMAT(Dates[Date], "MMMM")
+    - Start of Week = Dates[Date] - WEEKDAY(Dates[Date], 2) + 1
 
-### Task 2 - Creating the star schema
-1. By going on model view and dragging the relationships desired the following relationships were created: 
+### Task 2 - Building the Star Schema Data Model
+1. Relationships created between tables: 
     - Orders[product_code] to Products[product_code]
     - Orders[Store Code] to Stores[store code]
     - Orders[User ID] to Customers[User UUID]
     - Orders[Order Date] to Date[date]
     - Orders[Shipping Date] to Date[date]
-It was made sure that the Orders[Date] and Date[Date] was the active relationships by looking at the properties when clicking on the relationship.
+- ![Star Schema](./README_images/star_schema.png)
 
 ### Task 3 - Creating a measure table
-- A measures table was created 
+- A measures table was created for future measures in the project
 
 ### Task 4 - Creating Key measures
-- The following measures were created using DAX formulas that can be seen on the .pbix file. 
+The following measures were created: 
 - The measure Total Orders counts the number of orders in the Orders table
 - The measure Total Revenue multiplies the Orders[Product Quantity] column by the Products[Sale Price] column for each row, and then sums the result
 - The measure Total Profit performs the following calculation: for each row, subtract the Products[Cost Price] from the Products[Sale Price], and then multiply the result by the Orders[Product Quantity], then 
@@ -109,22 +198,19 @@ sums the result for all rows
     - Start of Month
     - Start of Week
     - Date
-
-2. New calculated column created called Country using the Country Code column, the DAX fomular is in the .pbix
-
+2. New calculated column created called Country using the Country Code column.
 3. Similarly with Geography hierarchy
     - World Region
     - Country
     - Country Region
-
-4. New column called Geography created where the Country Region and Country column in the Stores 
-
+4. New column called Geography created where the Country Region and Country column are joined.
 5. In the column tools the following categories were assigned:
     - World Region : Continent
     - Country : Country
     - Country Region : State or Province
 
-## Milestone 4
+
+## Milestone 4 - Setting up the Report
 
 ### Task 1 - Report pages
 Report pages where added, in Model view by pressing the plus button. The pages added:
@@ -132,18 +218,16 @@ Report pages where added, in Model view by pressing the plus button. The pages a
 - Customer Detail
 - Product Detail
 - Stores Map
-Also a theme was chosen in the View tab. The team chosen was the Colorblind safe one, in case any viewer of these is colourblind. 
 
-### Task 2 - Adding Navigation Sidebar
-- Rectangle shape added in all pages. Insert > Shapes > Choose rectangle > In properties select desired colour. 
+Also a theme was chosen in the View tab. The theme chosen was the Colorblind safe one, to have in mind a variety of viewers of the project. 
+### Task 2 - Adding a Navigation Sidebar
+- Rectangle shape added in all pages. Going from the bottom to the top of the page on the left hand side. 
 
-## Milestone 5
+## Milestone 5 - Building a Customer Detail page
 
 ### Task 1 - Creating Headline Card Visuals
-1.  Two rectangles in top left corner of the page were created (similar process as Adding navigation bar)
-2. Two card visuals to go on over these rectangles were added one for Total customers and one for the Revenue per Customer measure (this measure was created by dividing the Total Customers / Total Revenue). 
-3. The Total Customers field was renamed to Unique Customers.
-
+1. Two card visuals were added one for Total customers and one for the Revenue per Customer measure (this measure was created by dividing the Total Customers / Total Revenue)
+2. The Total Customers field was renamed to Unique Customers
 ### Task 2 - Adding Summary Charts
 1. Donut chart visual was added using the Users[Country] column to filter the [Total Customers] measure
 2. Column chart visual was created using the Products[Category] column to filter the [Total Customers] measure
@@ -153,33 +237,29 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
     - X axis: Date Hierarchy
     - Y axis: Total Customers measures
     Where it was selected that the user could only drill down up to Start of Month, hence deselecting Date and Start of Week on the Data pane
-2. A trend line, and a forecast for the next 10 periods with a 95% confidence interval were added. This can be selected to be turned on, on the Format pane. 
-
+2. A trend line, and a forecast for the next 10 periods with a 95% confidence interval were added.
 ### Task 4 - Creating a Top 20 Customer table 
 1. A visuals table was created with the followiung columns:
     - Customers[Full Name]
     - Total Orders measure
     - Total Revenue measure
-2. A TopN Filter was applied to get the Top 20 Customers based on the Total Revenue 
-
+2. A TopN Filter was applied to get the Top 20 Customers based on the Total Revenue.
 ### Task 5 - Creating Top Customer Cards
-1. A card (new) visual was added. This was done by using a Q&A card to get the Top customer by Top Revenue (this is the prompt).
-2. Then the card visual icon is pressed and Full Name, Total Quantity and Total Revenue are selected.
-
+1. A card visual was added to show the top customer, selecting Full Name, Total Quantity and Total Revenue.
 ### Task 6 - Adding a Data Slicer
 1. A data slicer was added. By pressing on the visual followed by selecting Year which is what we want the data to be sliced on. 
 
+
 ## Milestone 6 - Customer Detail Page
 ### Task 1 - Creating task visuals
-1. Adding card visuals using the card (new)
+1. Card visuals were added
 2. Total Revenue, Total Orders and Total Profit are the measures selected
 3. On  Format > Callout Values we select 2 decimal points for Total Profit and Total Revenue, 1 decimal point for Total Orders
 4. The formatting of the card visuals to kept the same as in the Customer Detail page
 
 ### Task 2 - Adding a Revenue Trending Line Chart 
 1. Copying the Customer Details line graph.
-2. The Y axis is changed to Total Revenue, The X axis is kept the same.
-
+2. The Y axis is changed to Total Revenue, The X axis is kept the same
 ### Task 3 - Adding Donut charts for Total Revenue by Country and Total Revenue by Store Type
 1. Revenue by Country donut chart:
     - Copy donut chart from Customer detail page
@@ -194,8 +274,8 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
     - X axis: Total Orders measure
 
 ### Task 5 - Adding KPI Visuals
-1. New measures to be created in the Measures tables using DAX formulas, formulas available in the .pbix file. 
-    - Previous Quarter Profit
+1. New measures to be created in the Measures tables using DAX formulas.
+    - Previous Quarter Profit ()
     - Previous Quarter Revenue
     - Previous Quarter Orders
     - Target Profit - which is 5%, this is achieved by multiplying the Previous Quarter Profit measure by 1.05. This is done respectively to both measures below. 
@@ -207,6 +287,7 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
     - Target: Target Profit
 3. In the Format pane the Trend axis is turned on, the direction: high is good, the bad colour is set to red and the Transparency is set to 15%
 4. Step 2 and 3 are repetead for revenue and orders. 
+
 
 ## Milestone 7 - Create a Product Detail Page
 ### Task 1 - Add Gauge Visuals
@@ -226,15 +307,14 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
         - Quarterly Target Profit
         - Quarterly Target Revenue
         - Quarterly Target Orders
-3. Conditional formatting was done to the callout value of each Gauge. This is done by going to Callout Value in the Format pane and pressing the fx button the choosing Rules and the rules applied were
+3. Conditional formatting was done to the callout value of each Gauge. This is done by going to Callout Value in the Format pane and pressing the fx button the choosing Rules and the rules applied were:
     - What field should we base this on? Current Quarter Orders
     - If value >= 3299.6 (this is the Quarterly Target Orders value) and < 999999999 (largest number possible) then the colour red
     - If value >= 0 and < 3299.6 then black
     - This is done respectively to each Gauge
 
 ### Task 2 - Plan out the Filter State Cards
-1. Add a Filter Card (new) selecting Products[Category] and Stores[Country]
-
+1. Add a Filter Card selecting Products[Category] and Stores[Country]
 ### Task 3 - Adding an Area Chart of Revenue by Product Category
 1. Area Chart was inserted with the following fields:
     - X axis Dates[Start of Quarter]
@@ -248,8 +328,7 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
     - Total Customers
     - Total Orders
     - Profit per Order (a new measure obtained by dividing Total Profit by Total Orders)
-2. On the filters pane on Description the Filter Type is put to Top N, in Show Items, select Top and put the number 10, in By Value Total Revenue is chosen. 
-
+2. On the filters pane on Description the Filter Type is put to Top N, in Show Items, select Top and put the number 10, in By Value Total Revenue is chosen
 ### Task 5 - Adding a scatter graph of Quantity Sold vs Profit per Item 
 1. The Profit per Item column was created in the Products table by subtracting the Sale Price by the Cost Price. The DAX formula is available in the .pbix file 
 2. A Scatter chart visual is added with the following specifications:
@@ -294,8 +373,7 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
         - Lasso button: Off
 
 ### Task 2 - Adding a Country Slicer
-1. Above the Map visual a slicer visual is added where the slicer field is Stores[Country] and the slicer style is Tile. Also, the Selection settings are Multi-select with Ctrl and Show "Select All" as an option in the slicer.
-
+1. Above the Map visual a slicer visual is added where the slicer field is Stores[Country] and the slicer style is Tile. Also, the Selection settings are Multi-select with Ctrl and Show "Select All" as an option in the slicer
 ### Task 3 - Creating a Store Drillthrough page 
 1. A new page called Store Drillthrough is created. In the Format pane the page type is set to drillthrough, drillthrough from: Country Region and Drillthrough when: Used as Category.
 2. Two new measures are created:
@@ -312,8 +390,7 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
 5. Two Guage visuals were added where:
     - Value: Profit YTD Target: Profit Goal
     - Value: Revenue YTD Target: Revenue Goal
-6. A Card visual was added selecting Stores[Geography]. But, Geography is renamed to Stored Location so when selecting any item from the table visual the card shows the store Location. 
-
+6. A Card visual was added selecting Stores[Geography]. But, Geography is renamed to Stored Location so when selecting any item from the table visual the card shows the store Location
 ### Task 4 - Creating a Tooltip page
 1. A new page called Tooltip page is created. The page type is set to Tooltip.
 2. The Profit Gauge is copied and pasted from the Drillthrough page to the Tooltip page
@@ -321,7 +398,8 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
 - Type: Report Page
 - Page: Tooltip Page
 
-## Milestone 5 - Cross Filtering and Navigation
+
+## Milestone 9 - Cross Filtering and Navigation
 ### Task 1 - Fixing the Cross Filtering
 - Using the Edit Interaction option in the Format tab (ribbon) for the pages below. Pressing the X button when the interaction is not needed. 
 1. Executive Summary page
@@ -340,6 +418,30 @@ Also a theme was chosen in the View tab. The team chosen was the Colorblind safe
 3. Changing the Apply settings to: On Hover and select the blue image for each button. 
 4. For each button the go to Action on the Format pane, turn it on. Select the type to Page Navigation and select the appropriate page for each button.
 5. Group the buttons, and copy and paste to each page. 
-6. Make sure you change the Executive Summary button in the subsequent page as you can not select the same page the button is on initially. 
+6. Make sure you change the Executive Summary button in the subsequent page as you can not select the same page the button is on initially
+
+
+## Mileston 10 - Creating Metrics for users outside the company using SQL
+### Task 1 - Connecting to the SQL Server
+1. Using SQLTools on VSCode we connect to the Postgres database that is hosted in Microsoft Azure using details provided. 
+
+### Task 2 - Checking the table and column names
+1. Using a SQL querie a list of tables in the database was printed. 
+2. A list of columns for each of the tables is printed and saved to .csv file. Avaialable in table_columns directory
+### Task 3 - Querying the database
+1. The following questions were answered with SQL queries and these are available as a query (.sql) in the sql_queries directory and the result (.csv) is available in the csv_results directory. These files are labelled by question number. 
+    1. How many staff are there in all of the UK stores? 13273
+    2. Which month in 2022 has had the highest revenue? October
+    3. Which German store type had the highest revenue for 2022? Local
+    4. Create a view where the rows are the store types and the columns are the total sales, percentage of total sales and the count of orders. Answer in csv_results
+    5. Which product category generated the most profit for the "Wiltshire, UK" region in 2021? Homeware
+
+## Images of Power BI's Report Pages
+- ![Executive Summary](./README_images/executive_summary.png)
+- ![Customer Detail](./README_images/customer_detail.png)
+- ![Product Detail](./README_images/product_detail.png)
+- ![Stores Map](./README_images/stores_map.png)
+- ![Store Drilltrhough](./README_images/store_drillthrough.png)
+- ![Tooltip Page](./README_images/tooltip_page.png)
 
 
