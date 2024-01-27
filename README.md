@@ -14,62 +14,62 @@ To use Power BI to:
 
 ## Table of Contents 
 - [File Structure](#file-structure)
-- [Milestone 1 - Creating a Github environment for the project](#milestone-1---creating-a-github-environment-for-the-project)
-- [Milestone 2 - Creating a Virtual Machine, Importing and Transforming the data](#milestone-2---creating-a-virtual-machine-importing-and-transforming-the-data)
-  - [Task 1 - Creating a Virtual Machine and Downloading Power BI](#task-1---creating-a-virtual-machine-and-downloading-power-bi)
-  - [Task 2 - Loading and Transforming the Orders table](#task-2---loading-and-transforming-the-orders-table)
-  - [Task 3 - Loading and Transforming the Products table](#task-3---loading-and-transforming-the-products-table)
-  - [Task 4 - Loading and Transforming the Stores table](#task-4---loading-and-transforming-the-stores-table)
-  - [Task 5 - Customers](#task-5---loading-and-transforming-the-customers-table)
+- [Creating a Github environment for the project](#creating-a-github-environment-for-the-project)
+- [Creating a Virtual Machine, Importing and Transforming the data](#creating-a-virtual-machine-importing-and-transforming-the-data)
+  - [1 - Creating a Virtual Machine and Downloading Power BI](#1---creating-a-virtual-machine-and-downloading-power-bi)
+  - [2 - Loading and Transforming the Orders table](#2---loading-and-transforming-the-orders-table)
+  - [3 - Loading and Transforming the Products table](#3---loading-and-transforming-the-products-table)
+  - [4 - Loading and Transforming the Stores table](#4---loading-and-transforming-the-stores-table)
+  - [5 - Loading and Transforming the Customers table](#5---loading-and-transforming-the-customers-table)
 
-- [Milestone 3 - Creating the Data Model](#milestone-3---creating-the-data-model)
-  - [Task 1 - Creating a Date Table](#task-1---creating-a-date-table)
-  - [Task 2 - Building the Star Schema Data Model](#task-2---building-the-star-schema-data-model)
-  - [Task 3 - Creating a measure table](#task-3---creating-a-measure-table)
-  - [Task 4 - Creating Key measures](#task-4---creating-key-measures)
-  - [Task 5 - Creating Date and Geography hierarchies](#task-5---creating-date-and-geography-hierarchies)
+- [Creating the Data Model](#creating-the-data-model)
+  - [1 - Creating a Date Table](#1---creating-a-date-table)
+  - [2 - Building the Star Schema Data Model](#2---building-the-star-schema-data-model)
+  - [3 - Creating a measure table](#3---creating-a-measure-table)
+  - [4 - Creating Key measures](#4---creating-key-measures)
+  - [5 - Creating Date and Geography hierarchies](#5---creating-date-and-geography-hierarchies)
 
-- [Milestone 4 - Setting up the Report](#milestone-4---setting-up-the-report)
-  - [Task 1 - Report pages](#task-1---report-pages)
-  - [Task 2 - Adding a Navigation Sidebar](#task-2---adding-a-navigation-sidebar)
+- [Setting up the Report](#setting-up-the-report)
+  - [1 - Report pages](#1---report-pages)
+  - [2 - Adding a Navigation Sidebar](#2---adding-a-navigation-sidebar)
 
-- [Milestone 5 - Building a Customer Detail page](#milestone-5---building-a-customer-detail-page)
-  - [Task 1 - Creating Headline Card Visuals](#task-1---creating-headline-card-visuals)
-  - [Task 2 - Adding Summary Charts](#task-2---adding-summary-charts)
-  - [Task 3 - Creating Line Chart](#task-3---creating-line-chart)
-  - [Task 4 - Creating a Top 20 Customer table](#task-4---creating-a-top-20-customer-table)
-  - [Task 5 - Creating Top Customer Cards](#task-5---creating-top-customer-cards)
-  - [Task 6 - Adding a Data Slicer](#task-6---adding-a-data-slicer)
+- [Building a Customer Detail Page](#building-a-customer-detail-page)
+  - [1 - Creating Headline Card Visuals](#1---creating-headline-card-visuals)
+  - [2 - Adding Summary Charts](#2---adding-summary-charts)
+  - [3 - Creating a Line Chart](#3---creating-a-line-chart)
+  - [4 - Creating a Top 20 Customer table](#4---creating-a-top-20-customer-table)
+  - [5 - Creating Top Customer Cards](#5---creating-top-customer-cards)
+  - [6 - Adding a Data Slicer](#6---adding-a-data-slicer)
 
-- [Milestone 6 - Customer Detail Page](#milestone-6---customer-detail-page)
-  - [Task 1 - Creating task visuals](#task-1---creating-task-visuals)
-  - [Task 2 - Adding a Revenue Trending Line Chart](#task-2---adding-a-revenue-trending-line-chart)
-  - [Task 3 - Adding Donut charts for Total Revenue by Country and Total Revenue by Store Type](#task-3---adding-donut-charts-for-total-revenue-by-country-and-total-revenue-by-store-type)
-  - [Task 4 - Adding a Bar Chart of Orders by Product categories](#task-4---adding-a-bar-chart-of-orders-by-product-categories)
-  - [Task 5 - Adding KPI Visuals](#task-5---adding-kpi-visuals)
+- [Building an Executive Summary Page](#building-an-executive-summary-page)
+  - [1 - Creating task visuals](#1---creating-task-visuals)
+  - [2 - Adding a Revenue Trending Line Chart](#2---adding-a-revenue-trending-line-chart)
+  - [3 - Adding Donut charts for Total Revenue by Country and Total Revenue by Store Type](#3---adding-donut-charts-for-total-revenue-by-country-and-total-revenue-by-store-type)
+  - [4 - Adding a Bar Chart of Orders by Product categories](#4---adding-a-bar-chart-of-orders-by-product-categories)
+  - [5 - Adding KPI Visuals](#5---adding-kpi-visuals)
 
-- [Milestone 7 - Create a Product Detail Page](#milestone-7---create-a-product-detail-page)
-  - [Task 1 - Add Gauge Visuals](#task-1---add-gauge-visuals)
-  - [Task 2 - Plan out the Filter State Cards](#task-2---plan-out-the-filter-state-cards)
-  - [Task 3 - Adding an Area Chart of Revenue by Product Category](#task-3---adding-an-area-chart-of-revenue-by-product-category)
-  - [Task 4 - Adding a Top Product tables](#task-4---adding-a-top-product-tables)
-  - [Task 5 - Adding a scatter graph of Quantity Sold vs Profit per Item](#task-5---adding-a-scatter-graph-of-quantity-sold-vs-profit-per-item)
-  - [Task 6 - Creating a Slicer Tool Bar](#task-6---creating-a-slicer-tool-bar)
+- [Building a Product Detail Page](#building-a-product-detail-page)
+  - [1 - Add Gauge Visuals](#1---add-gauge-visuals)
+  - [2 - Plan out the Filter State Cards](#2---plan-out-the-filter-state-cards)
+  - [3 - Adding an Area Chart of Revenue by Product Category](#3---adding-an-area-chart-of-revenue-by-product-category)
+  - [4 - Adding a Top Product tables](#4---adding-a-top-product-tables)
+  - [5 - Adding a scatter graph of Quantity Sold vs Profit per Item](#5---adding-a-scatter-graph-of-quantity-sold-vs-profit-per-item)
+  - [6 - Creating a Slicer Tool Bar](#6---creating-a-slicer-tool-bar)
 
-- [Milestone 8 - Creating a Store Map page](#milestone-8---creating-a-store-map-page)
-  - [Task 1 - Adding a Map visual](#task-1---adding-a-map-visual)
-  - [Task 2 - Adding a Country Slicer](#task-2---adding-a-country-slicer)
-  - [Task 3 - Creating a Store Drillthrough page](#task-3---creating-a-store-drillthrough-page)
-  - [Task 4 - Creating a Tooltip page](#task-4---creating-a-tooltip-page)
+- [Building a Store Map page](#building-a-store-map-page)
+  - [1 - Adding a Map visual](#1---adding-a-map-visual)
+  - [2 - Adding a Country Slicer](#2---adding-a-country-slicer)
+  - [3 - Creating a Store Drillthrough page](#3---creating-a-store-drillthrough-page)
+  - [4 - Creating a Tooltip page](#4---creating-a-tooltip-page)
 
-- [Milestone 9 - Cross Filtering and Navigation](#milestone-9---cross-filtering-and-navigation)
-  - [Task 1 - Fixing the Cross Filtering](#task-1---fixing-the-cross-filtering)
-  - [Task 2 - Adding Navigation buttons](#task-2---adding-navigation-buttons)
+- [Cross Filtering and Navigation](#cross-filtering-and-navigation)
+  - [1 - Fixing the Cross Filtering](#1---fixing-the-cross-filtering)
+  - [2 - Adding Navigation buttons](#2---adding-navigation-buttons)
 
-- [Mileston 10 - Creating Metrics for users outside the company using SQL](#mileston-10---creating-metrics-for-users-outside-the-company-using-sql)
-  - [Task 1 - Connecting to the SQL Server](#task-1---connecting-to-the-sql-server)
-  - [Task 2 - Checking the table and column names](#task-2---checking-the-table-and-column-names)
-  - [Task 3 - Querying the database](#task-3---querying-the-database)
+- [Mileston 10 - Creating Metrics for users outside the company using SQL](#creating-metrics-for-users-outside-the-company-using-sql)
+  - [1 - Connecting to the SQL Server](#1---connecting-to-the-sql-server)
+  - [2 - Checking the table and column names](#2---checking-the-table-and-column-names)
+  - [3 - Querying the database](#3---querying-the-database)
 
 - [Images of Power BI's Report Pages](#images-of-power-bis-report-pages)
 
@@ -105,16 +105,16 @@ To use Power BI to:
     - power_bi_project.pbix
     - README.md
 
-## Milestone 1 - Creating a Github environment for the project 
+## Creating a Github environment for the project 
 1. A Github environment for the project was created and connected to the local machine's VScode. 
 
-## Milestone 2 - Creating a Virtual Machine, Importing and Transforming the data
+## Creating a Virtual Machine, Importing and Transforming the data
 
-### Task 1 - Creating a Virtual Machine and Downloading Power BI
+### 1 - Creating a Virtual Machine and Downloading Power BI
 - A Windows virtual machine was created on Microsoft Azure for the purpose of downloading Power BI
 - A file called power_bi_project.pbix was created
 
-### Task 2 - Loading and Transforming the Orders table
+### 2 - Loading and Transforming the Orders table
 The Orders table is the main fact table. It contains information about each order, including the order and shipping dates, the customer, store and product IDs for associating with dimension tables, and the amount of each product ordered. Each order in this table consists of an order of a single product type, so there is only one product code per order
 1. The Orders table is imported from an Azure SQL Database with the credentials provided
 2. The [Card Number] column is deleted for data privacy
@@ -122,7 +122,7 @@ The Orders table is the main fact table. It contains information about each orde
 4. Missing and null values on [Order Date] column were filtered out and removed
 5. Columns were renamed in accordance to Power BI conventions
 
-### Task 3 - Loading and Transforming the Products table
+### 3 - Loading and Transforming the Products table
 The Products table contains information about each product sold by the company, including the product code, name, category, cost price, sale price, and weight.
 1. The Products table was a .csv which was downloaded and imported to Power BI. 
 2. Duplicates on Product Code column were removed
@@ -136,22 +136,22 @@ The Products table contains information about each product sold by the company, 
 4. Columns that are no longer needed such as the previous weight column were deleted
 5. Columns were renamed in accordance to Power BI conventions
 
-### Task 4 - Loading and Transforming the Stores table
+### 4 - Loading and Transforming the Stores table
 The Stores table contains information about each store, including the store code, store type, country, region, and address.
 1. The Stores table is imported from an Azure Blob storage with the credentials provided
 2. Columns were renamed in accordance to Power BI conventions
 
-### Task 5 - Loading and Transforming the Customers table 
+### 5 - Loading and Transforming the Customers table 
 The Customers table contains information abot the customer, including address, date of birth, email, telephone, among others. 
 1. The Customer table was downloaded from a .zip file and imported to Power BI. The table was in 3 different parts so they were appended once imported. 
 2. A [Full Name] column was created combining the [First Name] and [Last Name] columns. 
 3. Columns no longer needed were deleted.
 4. Columns were renamed in accordance to Power BI conventions
 
-## Milestone 3 - Creating the Data Model
+## Creating the Data Model
 
-### Task 1 - Creating a Date Table
-A Continues date table is created covering the entire time period of the data. 
+### 1 - Creating a Date Table
+A continuous date table is created covering the entire time period of the data. 
 1. A date table running from the start of the year containing the earliest date in the Orders[Order Date] column to the end of the year containing the latest date in the Orders[Shipping Date] column is created with the following DAX formula Dates = CALENDAR(MIN(Orders[Order Date]), MAX(Orders[Shipping Date]))
 2. The following column were created: 
     - Day of Week
@@ -168,7 +168,7 @@ A Continues date table is created covering the entire time period of the data.
     - Month Name = FORMAT(Dates[Date], "MMMM")
     - Start of Week = Dates[Date] - WEEKDAY(Dates[Date], 2) + 1
 
-### Task 2 - Building the Star Schema Data Model
+### 2 - Building the Star Schema Data Model
 1. Relationships created between tables: 
     - Orders[product_code] to Products[product_code]
     - Orders[Store Code] to Stores[store code]
@@ -177,10 +177,10 @@ A Continues date table is created covering the entire time period of the data.
     - Orders[Shipping Date] to Date[date]
 - ![Star Schema](./README_images/star_schema.png)
 
-### Task 3 - Creating a measure table
+### 3 - Creating a measure table
 - A measures table was created for future measures in the project
 
-### Task 4 - Creating Key measures
+### 4 - Creating Key measures
 The following measures were created: 
 - The measure Total Orders counts the number of orders in the Orders table
 - The measure Total Revenue multiplies the Orders[Product Quantity] column by the Products[Sale Price] column for each row, and then sums the result
@@ -191,7 +191,7 @@ sums the result for all rows
 - The measure Profit YTD calculates the total profit for the current year
 - The measure Revenue YTD calculates the total revenue for the current year
 
-### Task 5 - Creating Date and Geography hierarchies
+### 5 - Creating Date and Geography hierarchies
 1. Date hierarchy created right clicking on the highest point of hierarchy, renaming and adding the columns lower down in order. 
     - Start of Year
     - Start of Quarter
@@ -210,9 +210,9 @@ sums the result for all rows
     - Country Region : State or Province
 
 
-## Milestone 4 - Setting up the Report
+## Setting up the Report
 
-### Task 1 - Report pages
+### 1 - Report pages
 Report pages where added, in Model view by pressing the plus button. The pages added:
 - Executive Summary
 - Customer Detail
@@ -220,47 +220,47 @@ Report pages where added, in Model view by pressing the plus button. The pages a
 - Stores Map
 
 Also a theme was chosen in the View tab. The theme chosen was the Colorblind safe one, to have in mind a variety of viewers of the project. 
-### Task 2 - Adding a Navigation Sidebar
+### 2 - Adding a Navigation Sidebar
 - Rectangle shape added in all pages. Going from the bottom to the top of the page on the left hand side. 
 
-## Milestone 5 - Building a Customer Detail page
+## Building a Customer Detail page
 
-### Task 1 - Creating Headline Card Visuals
+### 1 - Creating Headline Card Visuals
 1. Two card visuals were added one for Total customers and one for the Revenue per Customer measure (this measure was created by dividing the Total Customers / Total Revenue)
 2. The Total Customers field was renamed to Unique Customers
-### Task 2 - Adding Summary Charts
+### 2 - Adding Summary Charts
 1. Donut chart visual was added using the Users[Country] column to filter the [Total Customers] measure
 2. Column chart visual was created using the Products[Category] column to filter the [Total Customers] measure
 
-### Task 3 - Creating  Line Chart 
-1. Line chart visual was created where 
+### 3 - Creating a Line Chart 
+1. A line chart visual was created where 
     - X axis: Date Hierarchy
     - Y axis: Total Customers measures
     Where it was selected that the user could only drill down up to Start of Month, hence deselecting Date and Start of Week on the Data pane
 2. A trend line, and a forecast for the next 10 periods with a 95% confidence interval were added.
-### Task 4 - Creating a Top 20 Customer table 
-1. A visuals table was created with the followiung columns:
+### 4 - Creating a Top 20 Customer table 
+1. A visuals table was created with the following columns:
     - Customers[Full Name]
     - Total Orders measure
     - Total Revenue measure
 2. A TopN Filter was applied to get the Top 20 Customers based on the Total Revenue.
-### Task 5 - Creating Top Customer Cards
+### 5 - Creating Top Customer Cards
 1. A card visual was added to show the top customer, selecting Full Name, Total Quantity and Total Revenue.
-### Task 6 - Adding a Data Slicer
+### 6 - Adding a Data Slicer
 1. A data slicer was added. By pressing on the visual followed by selecting Year which is what we want the data to be sliced on. 
 
 
-## Milestone 6 - Customer Detail Page
-### Task 1 - Creating task visuals
+## Building an Executive Summary Page
+### 1 - Creating task visuals
 1. Card visuals were added
 2. Total Revenue, Total Orders and Total Profit are the measures selected
 3. On  Format > Callout Values we select 2 decimal points for Total Profit and Total Revenue, 1 decimal point for Total Orders
 4. The formatting of the card visuals to kept the same as in the Customer Detail page
 
-### Task 2 - Adding a Revenue Trending Line Chart 
+### 2 - Adding a Revenue Trending Line Chart 
 1. Copying the Customer Details line graph.
 2. The Y axis is changed to Total Revenue, The X axis is kept the same
-### Task 3 - Adding Donut charts for Total Revenue by Country and Total Revenue by Store Type
+### 3 - Adding Donut charts for Total Revenue by Country and Total Revenue by Store Type
 1. Revenue by Country donut chart:
     - Copy donut chart from Customer detail page
     - Change Total Customers to Total Revenue 
@@ -268,12 +268,12 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
     - Copy donut chart made on Step 1
     - Change Stores[Country] to Stores[Store Type]
 
-### Task 4 - Adding a Bar Chart of Orders by Product categories
+### 4 - Adding a Bar Chart of Orders by Product categories
 1. Clustered bar chart visual was created
     - Y axis: Products[Category]
     - X axis: Total Orders measure
 
-### Task 5 - Adding KPI Visuals
+### 5 - Adding KPI Visuals
 1. New measures to be created in the Measures tables using DAX formulas.
     - Previous Quarter Profit ()
     - Previous Quarter Revenue
@@ -289,8 +289,8 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
 4. Step 2 and 3 are repetead for revenue and orders. 
 
 
-## Milestone 7 - Create a Product Detail Page
-### Task 1 - Add Gauge Visuals
+## Building a Product Detail Page
+### 1 - Add Gauge Visuals
 1. In the Measures Table the following measures were created:
     - Current Quarter Profit
     - Current Quarter Revenue 
@@ -313,15 +313,15 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
     - If value >= 0 and < 3299.6 then black
     - This is done respectively to each Gauge
 
-### Task 2 - Plan out the Filter State Cards
+### 2 - Plan out the Filter State Cards
 1. Add a Filter Card selecting Products[Category] and Stores[Country]
-### Task 3 - Adding an Area Chart of Revenue by Product Category
-1. Area Chart was inserted with the following fields:
+### 3 - Adding an Area Chart of Revenue by Product Category
+1. An area Chart was inserted with the following fields:
     - X axis Dates[Start of Quarter]
     - Y axis Total Revenue measure
     - Legend Products[Category]
 
-### Task 4 - Adding a Top Product tables 
+### 4 - Adding a Top Product tables 
 1. A table visual is added witht he following columns selected:
     - Product Description
     - Total Revenue
@@ -329,7 +329,7 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
     - Total Orders
     - Profit per Order (a new measure obtained by dividing Total Profit by Total Orders)
 2. On the filters pane on Description the Filter Type is put to Top N, in Show Items, select Top and put the number 10, in By Value Total Revenue is chosen
-### Task 5 - Adding a scatter graph of Quantity Sold vs Profit per Item 
+### 5 - Adding a scatter graph of Quantity Sold vs Profit per Item 
 1. The Profit per Item column was created in the Products table by subtracting the Sale Price by the Cost Price. The DAX formula is available in the .pbix file 
 2. A Scatter chart visual is added with the following specifications:
     - Values: Products[Description]
@@ -337,7 +337,7 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
     - Y-Axis: Products[Total Quantity]
     - Legend: Products[Category]
 
-### Task 6 - Creating a Slicer Tool Bar
+### 6 - Creating a Slicer Tool Bar
 1. A custom button is added to the Navigation bar. The custom icon is a Filter icon. The tooltip text is changed to Open Slicer Panel. 
 2. A rectangle shape is added (what is going to be the slicer bar). Where the shape is the height of the page and 3 times the width of the navigation bar. The shape is brought to the top of the stacking order. 
 3. Two new Slicers added
@@ -361,8 +361,8 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
     - Filter button:
 
 
-## Milestone 8 - Creating a Store Map page
-### Task 1 - Adding a Map visual 
+## Building a Store Map page
+### 1 - Adding a Map visual 
 1. A Map visual is added where:
     - Location: Geography Hierarchy 
     - Bubble Size: Profit YTD
@@ -372,9 +372,9 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
         - Zoom buttons: Off
         - Lasso button: Off
 
-### Task 2 - Adding a Country Slicer
+### 2 - Adding a Country Slicer
 1. Above the Map visual a slicer visual is added where the slicer field is Stores[Country] and the slicer style is Tile. Also, the Selection settings are Multi-select with Ctrl and Show "Select All" as an option in the slicer
-### Task 3 - Creating a Store Drillthrough page 
+### 3 - Creating a Store Drillthrough page 
 1. A new page called Store Drillthrough is created. In the Format pane the page type is set to drillthrough, drillthrough from: Country Region and Drillthrough when: Used as Category.
 2. Two new measures are created:
 - Profit Goal (20%) where the Profit YTD is multiplied by 1.2 to obtain this. DAX formula available in file. 
@@ -391,7 +391,7 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
     - Value: Profit YTD Target: Profit Goal
     - Value: Revenue YTD Target: Revenue Goal
 6. A Card visual was added selecting Stores[Geography]. But, Geography is renamed to Stored Location so when selecting any item from the table visual the card shows the store Location
-### Task 4 - Creating a Tooltip page
+### 4 - Creating a Tooltip page
 1. A new page called Tooltip page is created. The page type is set to Tooltip.
 2. The Profit Gauge is copied and pasted from the Drillthrough page to the Tooltip page
 3. In Stores Map page, on the Map visuals, Tooltips in the format page is set to On. Options:
@@ -399,8 +399,8 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
 - Page: Tooltip Page
 
 
-## Milestone 9 - Cross Filtering and Navigation
-### Task 1 - Fixing the Cross Filtering
+## Cross Filtering and Navigation
+### 1 - Fixing the Cross Filtering
 - Using the Edit Interaction option in the Format tab (ribbon) for the pages below. Pressing the X button when the interaction is not needed. 
 1. Executive Summary page
     - Product Category bar chart to not filter card visuals or KPI visuals. 
@@ -412,7 +412,7 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
     - Scatter graph to not affect any visual 
     - Table visual to not affect any visual
 
-### Task 2 - Adding Navigation buttons
+### 2 - Adding Navigation buttons
 1. Four blank buttons were added to the navigation bar on the Executive Summary page
 2. On Format pane > Button Style > Apply settings: Default. Then on Icon > Icon Type > Custom, select the button corresponding button in white (the blue option is for the hover option). Repeat this with every button. 
 3. Changing the Apply settings to: On Hover and select the blue image for each button. 
@@ -421,14 +421,14 @@ Also a theme was chosen in the View tab. The theme chosen was the Colorblind saf
 6. Make sure you change the Executive Summary button in the subsequent page as you can not select the same page the button is on initially
 
 
-## Mileston 10 - Creating Metrics for users outside the company using SQL
-### Task 1 - Connecting to the SQL Server
+## Creating Metrics for users outside the company using SQL
+### 1 - Connecting to the SQL Server
 1. Using SQLTools on VSCode we connect to the Postgres database that is hosted in Microsoft Azure using details provided. 
 
-### Task 2 - Checking the table and column names
+### 2 - Checking the table and column names
 1. Using a SQL querie a list of tables in the database was printed. 
-2. A list of columns for each of the tables is printed and saved to .csv file. Avaialable in table_columns directory
-### Task 3 - Querying the database
+2. A list of columns for each of the tables is printed and saved to .csv file. Available in table_columns directory
+### 3 - Querying the database
 1. The following questions were answered with SQL queries and these are available as a query (.sql) in the sql_queries directory and the result (.csv) is available in the csv_results directory. These files are labelled by question number. 
     1. How many staff are there in all of the UK stores? 13273
     2. Which month in 2022 has had the highest revenue? October
